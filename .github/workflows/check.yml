@@ -27,16 +27,25 @@ jobs:
         include:
           - target: "x86_64-unknown-linux-gnu"
             os: "ubuntu-latest"
-            cross: false
+            cross: true
           - target: "x86_64-unknown-linux-musl"
             os: "ubuntu-latest"
-            cross: false
+            cross: true
+
+          - target: "aarch64-unknown-linux-gnu"
+            os: "ubuntu-latest"
+            cross: true
+          - build: "arm-unknown-linux-gnueabihf"
+            os: "ubuntu-latest"
+            cross: true
+          - build: "arm-unknown-linux-musleabihf"
+            os: "ubuntu-latest"
+            cross: true
+
           - target: "x86_64-pc-windows-gnu"
             os: "ubuntu-latest"
             cross: true
-          - target: "aarch64-apple-darwin"
-            os: "macOS-latest"
-            cross: true
+
           - target: "x86_64-apple-darwin"
             os: "macOS-latest"
             cross: false
